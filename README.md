@@ -17,6 +17,7 @@ The data model is based on a subset of tables from the db, including tables Cust
 
 ## 📊 Sample Visual: Sales by Region
 This visual shows total sales amount ('LineTotal') grouped by region ('SalesTerritory.Name')
+![Clustered Column Chart](screenshots/clustered_column_chart.jpg)
 
 ## 🚀 How to run
 
