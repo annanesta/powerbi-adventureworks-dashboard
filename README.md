@@ -15,9 +15,18 @@ The data model is based on a subset of tables from the db, including tables Cust
 - Customer (∞) -> Territory (∞). Many to many: each customer can have multiple territories, as well as each territory can have multiple customers. This connection is resolved through the SalesOrderHeader table. 
 ![ER Diagram](screenshots/er-diagram.jpg)
 
-## 📊 Sample Visual: Sales by Region
-This visual shows total sales amount ('LineTotal') grouped by region ('SalesTerritory.Name')
-![Clustered Column Chart](screenshots/clustered_column_chart.jpg)
+## 💼 The Executive Dashboard
+This executive dashboard presents high-level KPIs and tracks overall sales performance over time.
+### The KPIs include:
+- **Total sales** - the total revenue generated from all orders
+- **Sales Involving a Saleperson** - revenue from orders handled by assigned salesperson
+- **% Sales with Assigned Saleperson** - the share of sales that involved a saleperson
+The line chart below shows the overall trend in sales from 2001 to 2004.
+![Executive Dashboard](screenshots/executive_dashboard.jpg)
+### Key insights:
+- Around **73%** of all sales revenue was generated through orders involving a saleperson, indicating a strong reliance on the sales team.
+- Sales show a generally **stable trend with minor fluctuations**, with a slight increase in later periods.
+- There may be opportunities to analyze the remaining 27% of sales that occur without saleperson  - e.g. self-service, online channels or store-driven purchases.
 
 ## 🚀 How to run
 
