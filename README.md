@@ -40,6 +40,7 @@ The line chart below shows the overall trend in sales from 2001 to 2004.
 - Around **73%** of all sales revenue was generated through orders involving a saleperson, indicating a strong reliance on the sales team.
 - Sales show a generally **stable trend with minor fluctuations**, with a slight decrease in later periods.
 - There may be opportunities to analyze the remaining 27% of sales that occur without saleperson  - e.g. self-service, online channels or store-driven purchases.
+
 [🔝Back to top](#-table-of-contents)
 
 ## 💼 Operational Dashboard
@@ -59,6 +60,7 @@ Below are examples of different filtered views:
 - Sales person **№284** generated nearly **2x more revenue in Germany than in France**.
 - In France, the revenue from **sales person №284** is **45x lower** than in from **sales person №286**, indicationg strong variation in regional effectiveness.
 - Total revenue in Germany is approximately **one-third lower** than in France. 
+
 [🔝Back to top](#-table-of-contents)
 
 ## 💼 Tactical Dashboard
@@ -86,6 +88,7 @@ Below are examples of different filtered views:
 - **Average order value (AOV)** rose by **approximately 69.2%**, indicating a significant increase in per-transaction revenue.
 - **Southwest** and **Northwest** were the leading regions in both months. **Canada** entered the top 3 in August, displacing **Australia**.
 - The growth in August appears to be driven more by **increasing average order value** than slovely by value. 
+
 [🔝Back to top](#-table-of-contents)
 
 ## 💼 Analytical Dashboard
@@ -116,12 +119,13 @@ Below are examples of different filtered views:
 - **Sales person contribution** is highly skewed: top sellers (ID 276, 277 and 285) drive most of the revenue indicating a strong dependency on key individuals.
 - **Average order value (AOV)** increased steadily over time, hinting at a shift toward higher-value clients or successful upselling strategies.
 - **27% of sales** were made without a sels person, but these are generally linked to lower regional growth - personal interaction still matters.
+
 [🔝Back to top](#-table-of-contents)
 
 ## 🧠 Cross-Dashboard Summary
 
 | Dashboard Type | Focus | Key Purpose |
-| --- | --- || --- |
+| --- | --- | --- |
 | Executive | High-level KPIs | Strategic overview |
 | Operational | Regions and sales persons | Periodical execution and performance control |
 | Tactical | Period comporition and breakdowns | Tackting short-term changes and patterns |
@@ -140,6 +144,7 @@ Below are examples of different filtered views:
 - Analyze the workflows of sales persons 276, 277 and 285 and scale best practices across the team.
 - Invest in data-driven lead targeting to further improve AOV trends.
 - Consider balancing automation and human interaction - automated sales may require support in low-performing regions.
+
 [🔝Back to top](#-table-of-contents)
 
 ## ✅ Project Conclusion
@@ -148,6 +153,7 @@ A potentional next step could include:
 - Adding predictive analytics (forecasting future sales)
 - Building custom alerts for KPI anomalies
 - Deploying the dashboards as a web-acessible Power BI service for continuous monitoring
+
 [🔝Back to top](#-table-of-contents)
 
 ## 🚀 How to run
