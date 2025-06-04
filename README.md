@@ -6,13 +6,18 @@ This project showcases a sales analytics dashboard built in Power BI using data 
 - '/screenshots/' - ER diagram and dashboards
 - 'adventureworks-sales-dashboard.pbix' - Power BI '.pbix' file with the full model and visuals
 - 'adventureworks-sales-dashboard.pdf' - '.pdf' file of the dashboards over view
+- 'measures.dax' - all DAX measures and calculated columns
 - 'README.md' - this file
 
 ## 📚 Table of Contents
-- [ER Diagram] (#-er-diagram)
-- [Executive Dashboard] (#-executive-dashboard)
-- [Operational Dashboard] (#-operational-dashboard)
-- [Tactical Dashboard] (#-tactical-dashboard)
+- [🧩 ER Diagram](#-er-diagram)
+- [💼 Executive Dashboard](#-executive-dashboard)
+- [💼 Operational Dashboard](#-operational-dashboard)
+- [💼 Tactical Dashboard](#-tactical-dashboard)
+- [💼 Analytical Dashboard](#-analytical-dashboard)
+- [🧠 Cross-Dashboard Summary](#-cross-dashboard-summary)
+- [✅ Project Conclusion](#-project-conclusion)
+- [🚀 How to run](#-how-to-run)
 
 ## 🧩 ER Diagram
 The data model is based on a subset of tables from the db, including tables Customers, SalesOrderHeader, SalesOrderDetail, SalesTerritory from the schema Sales. 
@@ -81,6 +86,68 @@ Below are examples of different filtered views:
 - **Average order value (AOV)** rose by **approximately 69.2%**, indicating a significant increase in per-transaction revenue.
 - **Southwest** and **Northwest** were the leading regions in both months. **Canada** entered the top 3 in August, displacing **Australia**.
 - The growth in August appears to be driven more by **increasing average order value** than slovely by value. 
+[🔝Back to top](#-table-of-contents)
+
+## 💼 Analytical Dashboard
+This analytical dashboard focuses on long-term patterns, correlations and performance dynamics in sale data. It allows buisness stakeholders to explore **trends over time**, understand **regional shifts** and assess **salesperson efficiency** with flexible filtering.
+It includes three KPIs:
+- **Total Sales** - the revenue generated during the selected period
+- **% Sales with Sales Person** - percentage of orders generated with the help of sales person
+- **Average Total Value (AOV)** - calculated as total sales divided by number of orders
+The time period can be changed using iteractive **date slicer controls**, allowing a flexible view of monthly dynamics.
+### Charts:
+- **KPI Cards** - high-level metrics of the selected period
+- **Sales over Time** - line chart of monthly revenue (2001-2004)
+- **Regional Sales Trends** - clustered column chart showing revenue by region over time
+- **Top 5 Sales Persons** - ranked by total sales volume
+- **Orders vs. AOV** - dual-axis line and column chart comparing order count and average order value
+- **Time Slicer** - monthly filtering across all visualizations
+Below are examples of different filtered views:
+- **Initial dashboard view**
+![Analytical Dashboard](screenshots/analytical_dashboard.jpg)
+- **Sales performance in 2002**
+![Filtered by 2002](screenshots/analytical_dashboard_filter_year_2002.jpg)
+- **Sales performance in 2003**
+![Filtered by 2003](screenshots/analytical_dashboard_filter_year_2003.jpg)
+### Dashboard insights:
+- **Sales trends** peaked in 2003 and declined in 2004, suggesting a potential saturation point of change in buisness context.
+- **Regional dynamics** reveal consistent strength in Southwest and Northwest. Canada showed notable growth in late 2003.
+- **Inverse correlation** observed: despite a drop in the number of orders in 2003, the average order value (AOV) aka average total value stayed high. This indicates a shift toward high-value sales, even with rediced volume. The dual-axis chart helps highlight this dynamic, combinig order count and AOV in one view.
+- **Sales person contribution** is highly skewed: top sellers (ID 276, 277 and 285) drive most of the revenue indicating a strong dependency on key individuals.
+- **Average order value (AOV)** increased steadily over time, hinting at a shift toward higher-value clients or successful upselling strategies.
+- **27% of sales** were made without a sels person, but these are generally linked to lower regional growth - personal interaction still matters.
+[🔝Back to top](#-table-of-contents)
+
+## 🧠 Cross-Dashboard Summary
+
+| Dashboard Type | Focus | Key Purpose |
+| --- | --- || --- |
+| Executive | High-level KPIs | Strategic overview |
+| Operational | Regions and sales persons | Periodical execution and performance control |
+| Tactical | Period comporition and breakdowns | Tackting short-term changes and patterns |
+| Analytical | Trends, correlations, drill-ins | Root cause analysis and growth levels |
+
+### 📈 Holistic Insights Across the Buisness
+- Revenue growth from 2001 to 2003 was strong, but reversed in 2004 - early warning for decline or saturation.
+- Top sales regions are consistent, but growth in Canada suggests new opportunities. 
+- Orders are growing slower than revenue - efficiency is improving, but volume should not be neglected.
+- Sales performance is not evenly distributed - teams may rely too nuch on high performance.
+- ~1/4 of sales happen without sales person involvment - while this may indicate automation, it also correlates with weak regions.
+
+### 🎯 Strategic Recommendations
+- Investigate the 2004 downturn to prevent future decline and identify whether external factors or internal inefficiencies were involved.
+- Allocate more training and resources to underperforming regions like Germany and Northeast.
+- Analyze the workflows of sales persons 276, 277 and 285 and scale best practices across the team.
+- Invest in data-driven lead targeting to further improve AOV trends.
+- Consider balancing automation and human interaction - automated sales may require support in low-performing regions.
+[🔝Back to top](#-table-of-contents)
+
+## ✅ Project Conclusion
+This project demonstrates how a multi-level dashboard can deliver value across operational, tactical and strategic layers of decision-making. The insights gethered provide a clear foundation for **data-informed decisions**.
+A potentional next step could include:
+- Adding predictive analytics (forecasting future sales)
+- Building custom alerts for KPI anomalies
+- Deploying the dashboards as a web-acessible Power BI service for continuous monitoring
 [🔝Back to top](#-table-of-contents)
 
 ## 🚀 How to run

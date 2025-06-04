@@ -1,0 +1,62 @@
+/===========================================
+//KPI Measures
+/===========================================
+
+Number of Orders = 
+DISTINCTCOUNT(
+    'Sales SalesOrderHeader'[SalesOrderID]
+)
+
+% Sales with SalesPerson = 
+DIVIDE(
+    CALCULATE(SUM('Sales SalesOrderDetail'[LineTotal]), NOT(ISBLANK('Sales SalesOrderHeader'[SalesPersonID]))),
+    SUM('Sales SalesOrderDetail'[LineTotal])
+)
+
+Average Total Value = 
+DIVIDE(
+    [Total Sales],[Total Orders]
+)
+
+
+/===========================================
+//Time Values
+/===========================================
+
+Sales Last Month = 
+CALCULATE(
+    [Total Sales], 
+    PREVIOUSMONTH('Sales SalesOrderHeader'[OrderDate])
+)
+
+Sales This Month = 
+CALCULATE(
+    [Total Sales],
+    KEEPFILTERS(VALUES('Sales SalesOrderHeader'[OrderDate]))
+)
+
+Sales MoM Change % = 
+DIVIDE(
+    [Sales This Month] - [Sales Last Month],
+    [Sales Last Month]
+)
+
+
+/===========================================
+//Sales Person Analysis
+/===========================================
+Avg Sales per Salesperson = 
+DIVIDE(
+    CALCULATE(SUM('Sales SalesOrderDetail'[LineTotal]), 
+              NOT(ISBLANK('Sales SalesOrderHeader'[SalesPersonID]))),
+    CALCULATE(DISTINCTCOUNT('Sales SalesOrderHeader'[SalesPersonID]))
+)
+
+
+/===========================================
+//Date Formatting Columns
+/===========================================
+
+OrderYear = YEAR('Sales SalesOrderHeader'[OrderDate])
+
+OrderYearMonth = FORMAT('Sales SalesOrderHeader'[OrderDate], "YYYY-MM")
